@@ -54,14 +54,11 @@ No additional setup or dependencies are required.
 5. Click the **New Game** or **Restart** button to play again.
 
 ## 📸 Screenshot
-
-> Add a screenshot of your project here.
+<img width="965" height="762" alt="Screenshot_01" src="https://github.com/user-attachments/assets/ee52bb5c-06f9-4cb8-88eb-76c22680029a" />
 
 Example:
-
 ```text
-assets/Screenshot_01.png
-assets/Screenshot_02.png
+assets/screenshot.png
 ```
 
 ## 🌱 Future Improvements
