@@ -22,6 +22,7 @@ const winPatterns = [
 
 const resetGame = () => {
     turnO = true;
+    count = 0;
     enableBoxes();
     msgContainer.classList.add("hide");
 }
@@ -29,6 +30,8 @@ const enableBoxes = () => {
     for(let box of boxes) {
         box.disabled = false;
         box.innerText = "";
+        box.classList.remove("x");
+        box.classList.remove("o");
     }
 };
 boxes.forEach((box) => {
@@ -46,7 +49,7 @@ boxes.forEach((box) => {
         count++;
 
         let isWinner = checkWinner();
-        if(count == 9 && !isWinner) {
+        if(count === 9 && !isWinner) {
             gameDraw();
         }
     })
@@ -63,14 +66,16 @@ const checkWinner = () => {
         let pos2val = boxes[pattern[1]].innerText;
         let pos3val = boxes[pattern[2]].innerText;
 
-        if(pos1val != "" && pos2val !="" && pos3val != "") {
+        if(pos1val !== "" && pos2val !== "" && pos3val !== "") {
             if(pos1val === pos2val && pos2val === pos3val) {
                 showWinner(pos1val);
+                return true;
 
             }
         }
         
     }
+    return false;
 };
 
 const showWinner = (winner) => {
